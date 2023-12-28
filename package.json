@@ -1,0 +1,16 @@
+{
+  "name": "professionbackend",
+  "version": "1.0.0",
+  "description": "professional backend project for the any interview of the node js seeries",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javscript",
+    "backend",
+    "chai"
+  ],
+  "author": "Neeraj K",
+  "license": "ISC"
+}
