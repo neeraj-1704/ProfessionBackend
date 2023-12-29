@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon -r dotenv/config --experimental-json-modules  src/index.js src/index.js"
+
   },
   "keywords": [
     "javscript",
@@ -17,6 +18,9 @@
   "license": "ISC",
   "dependencies": {
     "D": "^1.0.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.3",
     "prettier": "^3.1.1"
   },
   "devDependencies": {
