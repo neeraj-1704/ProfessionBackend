@@ -61,7 +61,7 @@ const userSchema = new Schema({
 userSchema.pre("save", async function (next){
     // here we are using the if condtion because without conditrion for every req it will change the pass in encrytp from to avoid we using the condtions
     if(!this.isModified("password")) return next();
-    this.password = bcrypt.hash(this.password ,10)
+    this.password = await bcrypt.hash(this.password ,10)
     next()
 })
 
