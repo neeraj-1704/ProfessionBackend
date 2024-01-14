@@ -1,8 +1,9 @@
 // file naming use acc to the standards user.model.js 
 
-import mongoose, { Mongoose, Schema } from "mongoose";
-import { jwt } from "jsonwebtoken";
+import mongoose, { Schema } from "mongoose";
+import jwt from "jsonwebtoken"
 import bcrypt from "bcrypt";
+//bcrypt  is used for the pass check  
 
 const userSchema = new Schema({
     username: {
@@ -36,7 +37,7 @@ const userSchema = new Schema({
     },
 
     watchHistory: [{
-        type: Schema.type.ObjectId,
+        type: Schema.Types.ObjectId,
         ref: "video",
 
     }
