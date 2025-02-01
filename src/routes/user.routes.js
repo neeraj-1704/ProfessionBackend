@@ -1,10 +1,12 @@
-import { Router } from "express";
+const express = require("express");
+const router = express.Router();
 import { loginUser, logoutUser, registerUser,refreshAccessToken } from "../controllers/user.controller.js";
 import {upload} from "../middlewares/multer.js";
 
-const router = Router()
+
 
 router.route("/register").post(
+    // avatar and coverImages will directly store in the multer separarely
     upload.fields([
         {
             name:"avatar",
@@ -20,8 +22,4 @@ router.route("/register").post(
 
 router.route("/login").post(loginUser)
 
-// secure routes
-
-router.route("/logout").post(verifyJWT, logoutUser);
-router.route("/refresh-token").post(refreshAccessToken);
 export default router; 

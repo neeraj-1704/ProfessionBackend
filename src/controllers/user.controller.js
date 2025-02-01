@@ -27,10 +27,23 @@ const generateRefreshAndAcessToken = async (userId) => {
 }
 
 // register page
+
+// taking the data from ui
+//validation - should not empty fileds
+//check the if user already exists or not like email and password
+// check the image and avatar
+// upload them on cludinary ,
+// create the object entry in the db
+// remove the password ansd refresh token from the responce
+// check for user creation
+// return responce
+
 const registerUser = asyncHandler(async (req, res) => {
     // res.status(200).json({
     //     message:"ok i am working fine"
     // })
+
+    // req.body = we are fetching the user details
 
     const { fullname, email, username, password } = req.body
     console.log("email: ", email);
@@ -314,8 +327,6 @@ const updateUserAvatar = asyncHandler(async (req, res) => {
 
 
 })
-
-
 // update cover image
 const updateUserCoverImage = asyncHandler(async (req, res) => {
     const coverImageLocalPath = req.file?.path
@@ -348,10 +359,14 @@ const updateUserCoverImage = asyncHandler(async (req, res) => {
 })
 // understand the payload data concepts
 export {
-    registerUser, loginUser,
-    logoutUser, refreshAccessToken,
+    registerUser, 
+    loginUser,
+    logoutUser, 
+    refreshAccessToken,
     changeCurrentPassword,
-    getCurrentUser, updateAccountDetails,
-    updateUserAvatar, updateUserCoverImage
+    getCurrentUser, 
+    updateAccountDetails,
+    updateUserAvatar,
+    updateUserCoverImage
 
 }

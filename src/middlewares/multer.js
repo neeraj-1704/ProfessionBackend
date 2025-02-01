@@ -1,5 +1,5 @@
 import multer from "multer";
-
+// multre is the third party api which is used for the upload the file
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, './public/temp')
